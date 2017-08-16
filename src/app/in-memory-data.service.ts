@@ -12,6 +12,17 @@ export class InMemoryDataService {
       { id: 19, name: 'Magma' },
       { id: 20, name: 'Tornado' }
     ];
-    return { heroes };
+
+    const friends = [
+        { id: 101, name: 'Anil' },
+        { id: 102, name: 'Gopal' },
+        { id: 103, name: 'Pramod' },
+        { id: 104, name: 'Narendra' },
+        { id: 105, name: 'Prakash' },
+        { id: 106, name: 'Vinod' },
+        { id: 107, name: 'Rahul' },
+        { id: 108, name: 'Himanshu' }
+    ];
+    return { heroes, friends };
   }
 }

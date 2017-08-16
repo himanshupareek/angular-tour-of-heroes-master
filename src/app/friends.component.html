@@ -1,0 +1,23 @@
+<h2>My Friends</h2>
+<div>
+  <label>Friend name:</label> <input #friendName />
+  <button (click)="add(friendName.value); friendName.value=''">
+    Add
+  </button>
+</div>
+
+<ul class="friends">
+  <li *ngFor="let friend of friends"
+    [class.selected]="friend === selectedFriend"
+    (click)="onSelect(friend)">
+    <span class="badge">{{friend.id}}</span> {{friend.name}}
+    <button class="delete-button" (click)="deleteFriend(friend, $event)">Delete</button>
+  </li>
+</ul>
+
+<div *ngIf="selectedFriend">
+  <h2>
+    {{selectedFriend.name | uppercase}} is my friend
+  </h2>
+  <button (click)="gotoFriendDetail()">View Details</button>
+</div>
