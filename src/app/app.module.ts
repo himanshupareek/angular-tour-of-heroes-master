@@ -14,6 +14,10 @@ import { HeroesComponent } from './heroes.component';
 import { HeroDetailComponent } from './hero-detail.component';
 import { HeroSearchComponent } from './hero-search.component';
 
+import { FriendsComponent }  from './friends.component';
+import { FriendService }          from './friend.service';
+import { FriendDetailComponent }  from './friend-detail.component';
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -28,8 +32,13 @@ import { HeroSearchComponent } from './hero-search.component';
     HeroSearchComponent,
     HeroesComponent,
     HeroDetailComponent,
+    FriendsComponent,
+    FriendDetailComponent 
   ],
-  providers: [HeroService],
+  providers: [
+    HeroService,
+    FriendService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
